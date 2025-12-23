@@ -1,0 +1,112 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyQt generated files
+*.pyc
+*_ui.py
+*_rc.py
+ui_*.py
+
+# Qt Creator/Designer specific
+*.autosave
+*.user
+*.user.*
+*.qmlc
+*.jsc
+*.qm
+.qmake.stash
+
+# Environments
+venv/
+env/
+ENV/
+.env
+.venv
+
+# IDE - VSCode
+.vscode/
+.history/
+*.code-workspace
+
+# IDE - PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# IDE - Spyder
+.spyderproject
+.spyproject
+
+# Distribution/Packaging
+*.manifest
+# *.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Log files
+*.log
+
+data
+data/
+
+models/
+model/
+.cache
+.huggingface
+bert-base-uncased/
+bert-base-chinese/
+paraphrase-multilingual-MiniLM-L12-v2/
+paraphrase-multilingual-mpnet-base-v2/
+annotation/cleaned_data*
+
+*.png
+*.tar.gz
+processed_topics_output
+
+wandb/
+data_new/
