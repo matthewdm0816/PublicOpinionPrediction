@@ -10,8 +10,12 @@
 <repo_root>/
 ├── annotation/             # 标注数据和数据集划分文件
 │   ├── data_split.json     # 训练/验证集划分
+|   ├── cleaned_data/       # 清洗后的舆情数据
 │   └── ...
-├── cleaned_data/           # 清洗后的舆情数据 (CSV格式，每个文件代表一个事件)
+├── data/                   # 舆情数据目录
+│   ├── event1/             # 事件1数据
+│   ├── event2/             # 事件2数据
+│   └── ...
 ├── model/                  # 模型保存目录 (包含权重、配置和训练曲线)
 ├── config.py               # 全局配置文件 (核心)
 ├── data.py                 # 数据加载、预处理 (HarvestText清洗, Emoji处理)
@@ -36,7 +40,9 @@
 
 ## 数据格式
 
-每个事件的数据存储在 `cleaned_data` 目录下的 CSV 文件中。每个 CSV 文件包含以下关键列：
+事件数据请在 [这里](https://drive.google.com/file/d/1ynCLRoA5By8eicsQzq9iqCu4R6kY6EB2/view?usp=sharing) 下载并解压到`data/`文件夹下
+
+每个事件的数据存储在 `data/<事件名>` 目录下的 CSV 文件中。每个 CSV 文件包含以下关键列：
 <!-- id,bid,user_id,用户昵称,微博正文,头条文章url,发布位置,艾特用户,话题,转发数,评论数,点赞数,发布时间,发布工具,微博图片url,微博视频url,retweet_id,ip,user_authentication,processed_text -->
 
 | 列名           | 说明                     |
@@ -46,7 +52,8 @@
 | `话题`         | 该微博所属的话题         |
 | `发布时间`     | 微博发布的时间戳         |
 | `发布位置`     | 微博发布的地理位置         |
-| `processed_text` | 清洗后的微博文本内容    |
+
+第一次运行后会自动生成清洗后的数据文件，存放在 `annotation/cleaned_data/` 目录下。
 
 标注文件则在 `annotation/data_split.json` 中定义，格式如下：
 
